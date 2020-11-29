@@ -7,7 +7,7 @@
 class ClockClient2 {
     // Should output 0, 1, 11, 12, 13, 23, 24
     public static void main(String[] args) {
-	Clock c = new Clock();
+	Clock c = Clock.instance();
 	System.out.println(c);   // 0
 	c.tick();
 	System.out.println(c);   // 1
@@ -25,7 +25,7 @@ class ClockClient2 {
 	System.out.println(c);
     }
     public static void footoo(Clock c) {
-	c = new Clock(); // Don't just remove this! 
+	c = Clock.instance(); // Don't just remove this! 
 	                 // Some well-intentioned but 
 	                 // uninformed summer intern 
                          // will accidentally do EXACTLY

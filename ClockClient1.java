@@ -7,7 +7,7 @@
 class ClockClient1 {
     // Should output 0, 1, 11, 12, 13, 23, 24
     public static void main(String[] args) {
-	Clock c = new Clock();
+	Clock c = Clock.instance();
 	System.out.println(c);   // 0
 	c.tick();
 	System.out.println(c);   // 1
